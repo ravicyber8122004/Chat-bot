@@ -3,130 +3,103 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Cyberpunk Chatbot with Voice Input</title>
+  <title>Simple Chatbot with Voice Input</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #0d0f13; /* Dark background */
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
       margin: 0;
       padding: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      color: #fff;
     }
 
     .chat-container {
-      width: 480px;
-      max-height: 700px;
-      background: rgba(15, 18, 21, 0.9); /* Semi-transparent dark background */
-      border-radius: 20px;
-      box-shadow: 0 0 15px rgba(0, 255, 255, 0.3); /* Glowing border effect */
+      width: 400px;
+      max-height: 600px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
       display: flex;
       flex-direction: column;
       overflow: hidden;
-      border: 1px solid #00ff99;
     }
 
     .chat-header {
-      background: #00ff99;
+      background: #007bff;
       color: #fff;
-      padding: 20px;
+      padding: 15px;
       text-align: center;
-      font-size: 24px;
-      font-weight: bold;
-      border-bottom: 2px solid #00b3b3;
-      box-shadow: 0 4px 15px rgba(0, 255, 255, 0.5);
+      font-size: 20px;
     }
 
     .chat-box {
       flex: 1;
-      padding: 20px;
-      background: rgba(15, 18, 21, 0.9);
+      padding: 15px;
       overflow-y: auto;
-      border-bottom: 2px solid #00b3b3;
+      background: #e9ecef;
     }
 
     .message {
       margin: 10px 0;
-      padding: 12px 20px;
-      border-radius: 15px;
+      padding: 10px;
+      border-radius: 8px;
       max-width: 80%;
       clear: both;
-      font-size: 16px;
-      line-height: 1.6;
-      box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
     }
 
     .user {
-      background: #00b3b3;
-      color: #fff;
+      background: #007bff;
+      color: white;
       float: right;
       text-align: right;
-      border-top-right-radius: 0;
     }
 
     .bot {
-      background: #444;
-      color: #ddd;
+      background: #dee2e6;
       float: left;
-      border-top-left-radius: 0;
     }
 
     .chat-input {
       display: flex;
-      padding: 15px;
-      background: #1b1b1b;
-      border-top: 1px solid #444;
+      border-top: 1px solid #ccc;
     }
 
     .chat-input input {
       flex: 1;
-      padding: 12px;
+      padding: 10px;
       border: none;
       outline: none;
-      background: #333;
-      color: #fff;
-      border-radius: 10px;
-      font-size: 16px;
-      box-shadow: 0 2px 5px rgba(0, 255, 255, 0.3);
     }
 
     .chat-input button,
     .chat-input .mic-btn {
-      padding: 12px 18px;
-      margin-left: 10px;
-      background: #ff0080; /* Neon pink for futuristic contrast */
+      padding: 10px 15px;
+      background: #007bff;
       color: white;
       border: none;
       cursor: pointer;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(255, 0, 128, 0.3);
-      font-size: 16px;
-      transition: all 0.3s ease;
-    }
-
-    .chat-input button:hover,
-    .chat-input .mic-btn:hover {
-      background: #d5006b;
-      transform: scale(1.05);
     }
 
     .chat-input .mic-btn {
-      background: #00ff99; /* Neon green for the mic button */
+      background: #28a745;
     }
 
-    .chat-input button:focus,
-    .chat-input .mic-btn:focus {
-      outline: none;
+    .chat-input button:hover {
+      background: #0056b3;
+    }
+
+    .chat-input .mic-btn:hover {
+      background: #218838;
     }
   </style>
 </head>
 
 <body>
   <div class="chat-container">
-    <div class="chat-header">Cyberpunk Chatbot</div>
+    <div class="chat-header">Chatbot with Voice</div>
     <div class="chat-box" id="chat-box"></div>
     <div class="chat-input">
       <input type="text" id="user-input" placeholder="Type or speak a message..." />
@@ -182,14 +155,41 @@
       }
       return "Sorry, I don't understand that.";
     }
-
-    function speakBotReply(text) {
+        function speakBotReply(text) {
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.lang = 'en-IN'; // Indian English accent
       utterance.pitch = 1;      // Pitch of the voice
       utterance.rate = 1;       // Speaking speed
       speechSynthesis.speak(utterance);
     }
+
+    // function speakBotReply(text) {
+    //   const utterance = new SpeechSynthesisUtterance(text);
+    //   const voices = speechSynthesis.getVoices();
+
+    //   // Use JARVIS-like voice
+    //   const jarvisVoice = voices.find(v => v.name === 'Google UK English Male');
+    //   if (jarvisVoice) {
+    //     utterance.voice = jarvisVoice;
+    //   }
+
+    //   utterance.lang = 'en-GB';  // UK English
+    //   utterance.pitch = 0.9;     // Slightly lower pitch for mature sound
+    //   utterance.rate = 0.95;     // Slightly slower to sound more deliberate
+
+    //   speechSynthesis.speak(utterance);
+    // }
+
+    // function listVoices() {
+    //   const voices = speechSynthesis.getVoices();
+    //   console.log("Available voices:");
+    //   voices.forEach((voice, index) => {
+    //     console.log(`${index + 1}. ${voice.name} - ${voice.lang}`);
+    //   });
+    // }
+
+    window.speechSynthesis.onvoiceschanged = listVoices;
+
 
     // 🎤 Voice Input using Web Speech API
     function startListening() {

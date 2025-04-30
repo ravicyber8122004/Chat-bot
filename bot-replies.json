@@ -30,5 +30,141 @@
   {
     "keywords": ["thanks", "thank you"],
     "reply": "You're welcome!"
+  },
+  {
+    "keywords": ["what time is it", "current time"],
+    "reply": "Sorry, I can't check the time right now. Please check your device."
+  },
+  {
+    "keywords": ["what is the weather like", "weather forecast", "is it raining today"],
+    "reply": "Sorry, I don't have access to live weather data. Please check a weather app!"
+  },
+  {
+    "keywords": ["who is the president of india", "current president"],
+    "reply": "The current president of India is Droupadi Murmu."
+  },
+  {
+    "keywords": ["can you help me", "help me"],
+    "reply": "Of course! Just tell me what you need help with."
+  },
+  {
+    "keywords": ["tell me a joke", "make me laugh"],
+    "reply": "Why don't skeletons fight each other? They don't have the guts!"
+  },
+  {
+    "keywords": ["what is the meaning of life", "life meaning"],
+    "reply": "Some say the meaning of life is to find happiness, others say it’s to seek knowledge. What's your take?"
+  },
+  {
+    "keywords": ["how do you work", "what is your purpose"],
+    "reply": "I'm a bot designed to assist you by answering your questions and helping with various tasks."
+  },
+  {
+    "keywords": ["what is artificial intelligence", "ai meaning"],
+    "reply": "Artificial Intelligence is the simulation of human intelligence in machines that are programmed to think and learn like humans."
+  },
+  {
+    "keywords": ["tell me a fun fact", "interesting fact"],
+    "reply": "Did you know that honey never spoils? Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old!"
+  },
+  {
+    "keywords": ["what is quantum computing", "quantum computers"],
+    "reply": "Quantum computing is a field of study focused on developing computers based on quantum theory. These computers can solve certain problems much faster than classical computers."
+  },
+  {
+    "keywords": ["what is a black hole", "tell me about black holes"],
+    "reply": "A black hole is a region of space where gravity is so strong that nothing, not even light, can escape from it."
+  },
+  {
+    "keywords": ["who invented the light bulb", "light bulb inventor"],
+    "reply": "Thomas Edison is credited with inventing the practical electric light bulb in 1879."
+  },
+  {
+    "keywords": ["tell me about space", "space facts"],
+    "reply": "Space is a vast and mysterious expanse that stretches beyond our atmosphere, filled with stars, planets, galaxies, and much more."
+  },
+  {
+    "keywords": ["what is blockchain", "blockchain technology"],
+    "reply": "Blockchain is a decentralized digital ledger used to record transactions across many computers so that the records cannot be altered retroactively."
+  },
+  {
+    "keywords": ["what is cryptocurrency", "cryptocurrency meaning"],
+    "reply": "Cryptocurrency is a digital or virtual currency that uses cryptography for security and operates independently of a central bank."
+  },
+  {
+    "keywords": ["who is Elon Musk", "Musk information"],
+    "reply": "Elon Musk is a businessman, engineer, and inventor, best known for founding SpaceX, Tesla, Inc., and co-founding PayPal."
+  },
+  {
+    "keywords": ["tell me about Tesla", "Tesla company"],
+    "reply": "Tesla, Inc. is an electric vehicle and clean energy company founded by Elon Musk, focused on producing electric vehicles, solar energy products, and energy storage solutions."
+  },
+  {
+    "keywords": ["what is the meaning of 42", "meaning of 42"],
+    "reply": "42 is the answer to the ultimate question of life, the universe, and everything, according to Douglas Adams' 'The Hitchhiker's Guide to the Galaxy.'"
+  },
+  {
+    "keywords": ["what is a neural network", "neural network"],
+    "reply": "A neural network is a series of algorithms that attempt to recognize underlying relationships in a set of data through a process that mimics the way the human brain works."
+  },
+  {
+    "keywords": ["who is Steve Jobs", "Steve Jobs biography"],
+    "reply": "Steve Jobs was the co-founder of Apple Inc., and he played a key role in revolutionizing personal computing, the music industry, and mobile phones."
+  },
+  {
+    "keywords": ["what is augmented reality", "AR technology"],
+    "reply": "Augmented Reality (AR) is a technology that superimposes computer-generated images or information onto a user's view of the real world."
+  },
+  {
+    "keywords": ["tell me a fact about the ocean", "ocean facts"],
+    "reply": "The ocean covers about 71% of the Earth's surface and contains 97% of the planet's water!"
+  },
+  {
+    "keywords": ["who is the CEO of Amazon", "Amazon CEO"],
+    "reply": "The current CEO of Amazon is Andy Jassy, who took over from Jeff Bezos in July 2021."
+  },
+  {
+    "keywords": ["what is the most expensive thing in the world", "world's most expensive"],
+    "reply": "The most expensive item ever sold was the 'Salvator Mundi' painting by Leonardo da Vinci, which sold for $450.3 million in 2017."
+  },
+  {
+    "keywords": ["can you speak other languages", "speak languages"],
+    "reply": "I primarily speak English, but I can understand and respond in various languages. Let me know which language you'd like me to use!"
+  },
+  {
+    "keywords": ["do you have a name", "what is your name"],
+    "reply": "I'm just called Chatbot, but you can name me if you'd like!"
+  },
+  {
+    "keywords": ["can you play music", "play a song"],
+    "reply": "Unfortunately, I can't play music directly. But you can easily find your favorite music on platforms like Spotify or YouTube!"
+  },
+  {
+    "keywords": ["what is 2 + 2", "simple math"],
+    "reply": "2 + 2 equals 4."
+  },
+  {
+    "keywords": ["who was Albert Einstein", "Einstein biography"],
+    "reply": "Albert Einstein was a theoretical physicist who developed the theory of relativity, one of the two pillars of modern physics."
+  },
+  {
+    "keywords": ["what is a VPN", "VPN explanation"],
+    "reply": "A VPN, or Virtual Private Network, is a service that encrypts your internet connection to ensure online privacy and security."
+  },
+  {
+    "keywords": ["how can I improve my productivity", "increase productivity"],
+    "reply": "Try focusing on one task at a time, setting clear goals, and eliminating distractions to boost your productivity."
+  },
+  {
+    "keywords": ["who invented the internet", "internet history"],
+    "reply": "The invention of the internet is credited to multiple people, but the primary contributors include Vinton Cerf and Bob Kahn, who developed TCP/IP protocols."
+  },
+  {
+    "keywords": ["what is machine learning", "machine learning meaning"],
+    "reply": "Machine learning is a branch of artificial intelligence that enables computers to learn from data and make predictions without being explicitly programmed."
+  },
+  {
+    "keywords": ["how old is the Earth", "age of Earth"],
+    "reply": "The Earth is about 4.5 billion years old."
   }
 ]
