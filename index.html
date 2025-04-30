@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Simple Chatbot with Voice Input</title>
@@ -15,14 +16,12 @@
       height: 100vh;
     }
 
-    
-
     .chat-container {
       width: 400px;
       max-height: 600px;
       background: #fff;
       border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
       display: flex;
       flex-direction: column;
       overflow: hidden;
@@ -75,7 +74,8 @@
       outline: none;
     }
 
-    .chat-input button, .chat-input .mic-btn {
+    .chat-input button,
+    .chat-input .mic-btn {
       padding: 10px 15px;
       background: #007bff;
       color: white;
@@ -96,6 +96,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="chat-container">
     <div class="chat-header">Chatbot with Voice</div>
@@ -128,11 +129,12 @@
       input.value = '';
 
       setTimeout(() => {
-       const botReply = getBotReply(message);
-       addMessage(botReply, 'bot');
-       speakBotReply(botReply); // 🔊 Speak the reply
-       }, 500);
-      
+        const botReply = getBotReply(message);
+        addMessage(botReply, 'bot');
+        speakBotReply(botReply); // 🔊 Speak the reply
+      }, 500);
+    }
+
     function addMessage(text, sender) {
       const chatBox = document.getElementById('chat-box');
       const messageDiv = document.createElement('div');
@@ -141,16 +143,6 @@
       chatBox.appendChild(messageDiv);
       chatBox.scrollTop = chatBox.scrollHeight;
     }
-
-
-    function speakBotReply(text) {
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.lang = 'en-IN'; // Indian English accent
-  utterance.pitch = 1;      // Pitch of the voice
-  utterance.rate = 1;       // Speaking speed
-  speechSynthesis.speak(utterance);
-}
-
 
     function getBotReply(userMessage) {
       const message = userMessage.toLowerCase();
@@ -163,6 +155,41 @@
       }
       return "Sorry, I don't understand that.";
     }
+        function speakBotReply(text) {
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'en-IN'; // Indian English accent
+      utterance.pitch = 1;      // Pitch of the voice
+      utterance.rate = 1;       // Speaking speed
+      speechSynthesis.speak(utterance);
+    }
+
+    // function speakBotReply(text) {
+    //   const utterance = new SpeechSynthesisUtterance(text);
+    //   const voices = speechSynthesis.getVoices();
+
+    //   // Use JARVIS-like voice
+    //   const jarvisVoice = voices.find(v => v.name === 'Google UK English Male');
+    //   if (jarvisVoice) {
+    //     utterance.voice = jarvisVoice;
+    //   }
+
+    //   utterance.lang = 'en-GB';  // UK English
+    //   utterance.pitch = 0.9;     // Slightly lower pitch for mature sound
+    //   utterance.rate = 0.95;     // Slightly slower to sound more deliberate
+
+    //   speechSynthesis.speak(utterance);
+    // }
+
+    // function listVoices() {
+    //   const voices = speechSynthesis.getVoices();
+    //   console.log("Available voices:");
+    //   voices.forEach((voice, index) => {
+    //     console.log(`${index + 1}. ${voice.name} - ${voice.lang}`);
+    //   });
+    // }
+
+    window.speechSynthesis.onvoiceschanged = listVoices;
+
 
     // 🎤 Voice Input using Web Speech API
     function startListening() {
@@ -173,16 +200,17 @@
 
       recognition.start();
 
-      recognition.onresult = function(event) {
+      recognition.onresult = function (event) {
         const transcript = event.results[0][0].transcript;
         document.getElementById('user-input').value = transcript;
         sendMessage();
       };
 
-      recognition.onerror = function(event) {
+      recognition.onerror = function (event) {
         alert('Voice input failed: ' + event.error);
       };
     }
   </script>
 </body>
+
 </html>
