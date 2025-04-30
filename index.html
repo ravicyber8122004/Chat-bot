@@ -127,13 +127,12 @@
       addMessage(message, 'user');
       input.value = '';
 
-   setTimeout(() => {
-  const botReply = getBotReply(message);
-  addMessage(botReply, 'bot');
-  speakBotReply(botReply); // 🔊 Speak the reply
-}, 500);
-
-
+      setTimeout(() => {
+       const botReply = getBotReply(message);
+       addMessage(botReply, 'bot');
+       speakBotReply(botReply); // 🔊 Speak the reply
+       }, 500);
+      
     function addMessage(text, sender) {
       const chatBox = document.getElementById('chat-box');
       const messageDiv = document.createElement('div');
