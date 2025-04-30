@@ -1,0 +1,26 @@
+[
+  {
+    "keywords": ["hello", "hi", "hey"],
+    "reply": "Hello! How can I help you today?"
+  },
+  {
+    "keywords": ["how are you", "how do you do"],
+    "reply": "I'm just a bot, but I'm functioning perfectly!"
+  },
+  {
+    "keywords": ["what is your name", "who are you"],
+    "reply": "I'm your friendly chatbot!"
+  },
+  {
+    "keywords": ["bye", "goodbye", "see you"],
+    "reply": "Goodbye! Have a great day!"
+  },
+  {
+    "keywords": ["help", "support"],
+    "reply": "Sure! I'm here to help. Please ask your question."
+  },
+  {
+    "keywords": ["thanks", "thank you"],
+    "reply": "You're welcome!"
+  }
+]
