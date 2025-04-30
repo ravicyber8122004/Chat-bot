@@ -20,6 +20,14 @@
     "reply": "Sure! I'm here to help. Please ask your question."
   },
   {
+    "keywords": ["tujhe kisne banaya", "kisne banaya", "banane wala kaun hai"],
+    "reply": "Mujhe Mr. Ravi_Cyber ne banaya hai."
+  },
+  {
+    "keywords": ["ravi kaun hai", "ravi kon hai", "ravi"],
+    "reply": "Ravi mere developer hain, aur Poornima College ke student hain."
+  }
+  {
     "keywords": ["thanks", "thank you"],
     "reply": "You're welcome!"
   }
