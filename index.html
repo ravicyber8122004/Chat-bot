@@ -97,6 +97,18 @@
   </div>
 
   <script>
+    let botDatabase = [];
+
+    // Load bot replies from JSON file
+    fetch('bot-replies.json')
+      .then(response => response.json())
+      .then(data => {
+        botDatabase = data;
+      })
+      .catch(error => {
+        console.error('Error loading bot-replies.json:', error);
+      });
+
     function sendMessage() {
       const input = document.getElementById('user-input');
       const message = input.value.trim();
@@ -105,7 +117,6 @@
       addMessage(message, 'user');
       input.value = '';
 
-      // Simulate bot response
       setTimeout(() => {
         const botReply = getBotReply(message);
         addMessage(botReply, 'bot');
@@ -122,11 +133,14 @@
     }
 
     function getBotReply(userMessage) {
-      // Simple fixed responses (can be expanded or replaced with AI)
-      const lower = userMessage.toLowerCase();
-      if (lower.includes('hello')) return "Hi there!";
-      if (lower.includes('how are you')) return "I'm a bot, but I'm doing great!";
-      if (lower.includes('bye')) return "Goodbye!";
+      const message = userMessage.toLowerCase();
+      for (let item of botDatabase) {
+        for (let keyword of item.keywords) {
+          if (message.includes(keyword)) {
+            return item.reply;
+          }
+        }
+      }
       return "Sorry, I don't understand that.";
     }
   </script>
